@@ -1,25 +1,34 @@
+<div class="title">
 <h1>Burgers!</h1>
+<img id="pic" src="https://media.giphy.com/media/3otPoz2V9lPlSH9pde/giphy.gif" alt="eatDaBurger">
+</div>
 
-<h2>Burgers to Eat!</h2>
+<div class="toEat"
+  <ul>
+    <h2 id="letsEat">Burgers to Eat!</h2>
+    {{#each burgers}}
+      {{#unless devoured}}
+        {{> burgers/burger-block devoured=true}}
+      {{/unless}}
+    {{/each}}
+  </ul>
+</div>
 
-<ul>
-  {{#each burgers}}
-    {{#unless devoured}}
-      {{> burgers/burger-block devoured=true}}
-    {{/unless}}
-  {{/each}}
-</ul>
 
-<h2>devoured burgers</h2>
 
-<ul>
-  {{#each burgers}}
-    {{#if devoured}}
-      {{> burgers/burger-block devoured=false}}
-    {{/if}}
-  {{/each}}
-</ul>
+<!-- burgers/burger-block devoured=false -->
+<div class="devouredBurgers">
+  <h2 id="eatenBurgers">Devoured Burgers</h2>
+    <ul>
+      {{#each burgers}}
+        {{#if devoured}}
+          <p>{{id}} {{burger_name}}</p>
+        {{/if}}
+      {{/each}}
+    </ul>
+</div>
 
+<div class="addBurger">
 <h2>Add a burger</h2>
 <form class="create-form">
 
@@ -30,3 +39,4 @@
 
   <button type="submit">Add burger</button>
 </form>
+</div>

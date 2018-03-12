@@ -1,8 +1,40 @@
-ul {
+body{
+  background-color: grey;
+}
+.title{
+  position: relative;
+  text-align: center;
+}
+
+#pic {
+  height: 200px;
+  width: 300px;
+}
+
+.toEat{
   padding: 5px;
   margin: 5px;
-  background: #faebd7;
+  background: orange;
+  width: 45%;
+  float: left;
 }
+
+#letsEat{
+  text-align: center;
+}
+
+.devouredBurgers {
+  padding: 5px;
+  margin: 5px;
+  background: orange;
+  width: 45%;
+  float: right;
+}
+
+#eatenBurgers{
+  text-align: center;
+}
+
 
 .label {
   font-weight: bold;
@@ -12,6 +44,12 @@ ul {
   padding: 5px;
   margin: 5px;
   background: aqua;
+}
+
+.addBurger{
+  text-align: center;
+  position: relative;
+  margin-top: 40%;
 }
 
 .form-group {
