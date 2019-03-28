@@ -1,12 +1,11 @@
 var express = require("express");
 var bodyParser = require("body-parser");
-var methodOverride = require("method-override");
-var path = require('Path');
+// var path = require('Path');
 
 var app = express();
 var PORT = process.env.PORT || 3000;
 
-app.use(express.static(path.join(__dirname, "public" )));
+// app.use(express.static(path.join(__dirname, "public" )));
 
 app.use(bodyParser.urlencoded({ extended: true}));
 
